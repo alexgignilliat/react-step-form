@@ -1,1 +1,1 @@
-A simple multi-step form created with React and Material UI
+A simple, multi-step form created with React and Material UI
