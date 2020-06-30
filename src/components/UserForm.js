@@ -31,6 +31,13 @@ export class UserForm extends Component {
         });
     };
 
+    reload = () => {
+        const {step} = this.state;
+        this.setState({
+            step: 1
+        })
+    }
+
     // Handle fields change
     handleChange = input => e => {
         this.setState({ [input]: e.target.value });
@@ -52,14 +59,26 @@ export class UserForm extends Component {
                 );
             case 2:
                 return (
-                    <h1>yeet</h1>
+                    <FormPersonalDetails
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
                 );
             case 3:
                 return (
-                    <h1>yeet</h1>
+                    <Confirm
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
                 );
             case 4:
-                return <h1>yeet</h1>;
+                return <Success
+                    values={values}
+                    reload={this.reload}
+                />;
             default:
                 (console.log('This is a multi-step form built with React.'))
         }

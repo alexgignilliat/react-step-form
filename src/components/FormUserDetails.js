@@ -17,47 +17,35 @@ export class FormUserDetails extends Component {
                 <React.Fragment>
                     <AppBar primary={true} title="Enter User Details" />
                     <TextField
-                    
+
                         hintText="Enter Your First Name"
                         floatingLabelText="First Name"
-                        onChange={handleChange()}
+                        onChange={handleChange('firstName')}
                         defaultValue={values.firstName}
-                    /><br/>
+                    /><br />
                     <TextField
                         hintText="Enter Your Last Name"
                         floatingLabelText="Last Name"
-                        onChange={handleChange()}
+                        onChange={handleChange('lastName')}
                         defaultValue={values.lastName}
-                    /><br/>
+                    /><br />
                     <TextField
                         hintText="Enter Your Email Address"
                         floatingLabelText="Email"
-                        onChange={handleChange()}
+                        onChange={handleChange('email')}
                         defaultValue={values.email}
-                    /><br/>
-                    <TextField
-                        hintText="Enter Your Occupation"
-                        floatingLabelText="Occuptation"
-                        onChange={handleChange()}
-                        defaultValue={values.occupation}
-                    /><br/>
-                    <TextField
-                        hintText="Enter Your City"
-                        floatingLabelText="City"
-                        onChange={handleChange()}
-                        defaultValue={values.city}
-                    /><br/>
-                    <RaisedButton 
-                    label="Continue" 
-                    secondary={true}
-                    style={styles.button}
-                    onClick={this.continue}/>
+                    /><br />
+                    <RaisedButton
+                        label="Continue"
+                        secondary={true}
+                        style={styles.button}
+                        onClick={this.continue} />
                 </React.Fragment>
 
             </MuiThemeProvider>
         )
 
-       
+
     }
 
 
